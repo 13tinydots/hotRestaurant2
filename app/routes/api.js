@@ -1,4 +1,5 @@
 import { Router } from "express";
+import api from "../services/api.js";
 
 const router = new Router();
 
@@ -7,12 +8,15 @@ router.get("/", (_, res) => {
   res.send("Hello api!");
 });
 
-router.get("tables", (_, res) => {
-  res.send("Hello Tables");
+// api.index
+router.get("/tables", async (_, res) => {
+  //
+  const tables = await api.index();
+  res.status(200).json(tables);
 });
 
-router.get("waitlist", (_, res) => {
-  res.send("Hello waitlist");
+router.get("/waitlist", async (_, res) => {
+  const waitlist = await api.index("reservations");
 });
 
 export default router;

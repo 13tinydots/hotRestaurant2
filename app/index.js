@@ -10,6 +10,9 @@ app.use("/api", apiRouter);
 // For any routes ending with '/reserve' USE reserveRouter to handle the request
 app.use("/reserve", reserveRouter);
 
+// allow express to receive incoming JSON body request
+app.use(express.json());
+
 // `get` is handling GET requests to the homepage directly
 app.get("/", (_, res) => {
   res.send("Hello World!");
