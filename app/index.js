@@ -1,5 +1,5 @@
-import apiRouter from ".routes/api.js";
 import express from "express";
+import apiRouter from "./routes/api.js";
 import reserveRouter from "./routes/reserve.js";
 
 const PORT = 5000;
