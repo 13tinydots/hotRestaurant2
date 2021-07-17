@@ -4,7 +4,8 @@ const router = new Router();
 router.get("/", (_, res) => {
   res.send("Reserve Page");
 });
-router.post("/", (_, res) => {
+router.post("/", (req, res) => {
+  console.log(req.body);
   res.send("Reserve Post");
 });
 // Importer can give any name

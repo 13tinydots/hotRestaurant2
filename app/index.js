@@ -7,11 +7,13 @@ const app = express();
 
 app.use("/api", apiRouter);
 
+// make sure this tool is above any request
+app.use(express.json());
+
 // For any routes ending with '/reserve' USE reserveRouter to handle the request
 app.use("/reserve", reserveRouter);
 
 // allow express to receive incoming JSON body request
-app.use(express.json());
 
 // `get` is handling GET requests to the homepage directly
 app.get("/", (_, res) => {

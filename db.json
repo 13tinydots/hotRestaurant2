@@ -1,6 +1,7 @@
 {
   "tables": [
     {
+      "id": 1,
       "customerName": "Ahmed",
       "customerEmail": "ahmed@example.com",
       "customerID": "afhaque89",
@@ -9,6 +10,7 @@
   ],
   "reservations": [
     {
+      "id": 2,
       "customerName": "Saima",
       "customerEmail": "saima@example.com",
       "phoneNumber": "000-000-0000",

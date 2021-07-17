@@ -12,7 +12,7 @@ export default {
     return data;
   },
 
-  add() {
-    console.log("adding data!");
+  async add(newCustomer) {
+    const { data } = await axios.post(`${BASE_URL}/tables`, newCustomer);
   },
 };
